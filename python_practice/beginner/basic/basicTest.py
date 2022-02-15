@@ -185,7 +185,75 @@ if __name__ == '__main__':
 
 
 # soln 
+n = int(raw_input())
+
+nums = map(int, raw_input().split())	
+print sorted(list(set(nums)))[-2]
+
+#soln 
+n = int(input())
+a = [int(x) for x in input().split()]
+largest = secondlargest = -100
+for x in a:
+    if x > largest:
+        tmp = largest
+        largest = x
+        secondlargest = tmp
+    elif x > secondlargest and x != largest:
+        secondlargest = x
+print(secondlargest)
+
+#soln 
+print sorted(set(arr))[-2]
+
+# soln 
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    
+    print(sorted(set(arr))[-2])
 
 
+# Given the names and grades for each student in a class of  students, store them in a nested list and 
+# print the name(s) of any 
+# student(s) having the second lowest grade.
+
+# Note: If there are multiple students with the second lowest grade, order their names alphabetically 
+# and print each name on a new line.
+
+# The ordered list of scores is , so the second lowest score is . There are two students with that score: 
+# . Ordered alphabetically, the names are printed as:
 
 
+# sln
+
+if __name__ == '__main__':
+    a= []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        a.append([score, name])
+
+    a.sort()
+    b = [i for i in a if i[0] != a[0][0]]
+    c = [j for j in b if j[0] == b[0][0]]
+    
+    c.sort(key=lambda x: x[1])
+    for i in range(len(c)):
+        print(c[i][1])
+
+
+# if __name__ == '__main__':
+    newlist = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        newlist.append([score, name])
+        
+    newlist.sort()
+    list2 = [i for i in newlist if i[0] != newlist[0][0]]
+    list3 = [x for x in list2 if x[0] == list2[0][0]]
+    
+    list3.sort(key=lambda j : j[1] )
+    for i in range(len(list3)):
+        print(list3[i][1])
