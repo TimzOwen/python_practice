@@ -257,3 +257,81 @@ if __name__ == '__main__':
     list3.sort(key=lambda j : j[1] )
     for i in range(len(list3)):
         print(list3[i][1])
+
+
+#The provided code stub will read in a dictionary containing key/value pairs of
+#  name:[marks] for a list of students. Print the average of the marks array for
+#  the student name provided, showing 2 places after the decimal.
+
+if __name__ == '__main__':
+    n = int(raw_input())
+    student_marks = {}
+    for _ in range(n):
+        line = raw_input().split()
+        name, scores = line[0], line[1:]
+        scores = map(float, scores)
+        student_marks[name] = scores
+    query_name = raw_input()
+    query_scores = student_marks[query_name]
+    print("{0:.2f}".format(sum(query_scores)/(len(query_scores))))
+
+#soln
+marks = {}
+for _ in range(int(input())):
+    line = input().split()
+    marks[line[0]] = list(map(float, line[1:]))
+print('%.2f' %(sum(marks[input()])/3))
+
+#soln
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        scores=sum(scores)/3
+        student_marks[name] = scores
+    query_name = input()    
+    print('%.2f' % student_marks[query_name])
+
+#soln
+n = int(raw_input())
+
+### create empty dictionary
+dict={}
+
+### kick off 'for' loop for 'n' times as specified by first     user input
+
+for line in range(n):
+
+###  grabs next input for 'n' times (as defined above) -    info defined as the split elements in the input string (        split on space " ")
+
+info = raw_input().split(" ")
+
+### declares 'scores' as floats, which are defined as       everything from the first element '1' on - using the slice      ':'
+
+scores = map(float, info[1:])
+
+### set element 0 of info to the sum of the scores divided      by the float of the length of scores (e.g. 3 in this case)      which computes the average - this overwrites the score      inputs, leaving jus the name key  and average score (you    can see this by 'print dict')
+
+dict[info[0]] = sum(scores) / float(len(scores))
+
+### print float with 2 decimal places '.2f' is the relevent     string formatting. '%' is the placeholder for the variable
+
+print "%.2f" % dict[raw_input()]
+
+
+#soln
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    marks = student_marks[query_name]
+    print("%.2f"%(sum(marks)/3))
+
+
+
