@@ -88,3 +88,46 @@ if __name__ == '__main__':
 # Given a year, determine whether it is a leap year. If it is a leap year, return the Boolean True, otherwise return False.
 # Note that the code stub provided reads from STDIN and passes arguments to the is_leap function. It is only necessary to complete the is_leap function.
 
+#sln 1
+def is_leap(year):
+    leap = False
+    
+    if(year%4==0) and (year%100!=0 or year%400==0):
+        leap = True
+    
+    return leap
+
+year = int(raw_input())
+
+
+# sln 2
+year=int(input("enter year to checjk"))
+
+def check_year(year):
+    leap = False
+    if(year%100==0 or year % 400==0 or year%4==0):
+        leap = True
+    return leap
+print(check_year(year))
+
+# sln 3
+def is_leap(year):
+	return year % 4 == 0 and (year % 400 == 0 or year % 100 != 0)
+
+# sln 4
+def is_leap(year):
+    leap = False
+    
+    if (year % 4 == 0):
+        leap = True
+        if (year % 100 == 0):
+            leap = False
+	if (year % 400 == 0):
+                leap = True
+    return leap
+
+#soln 5 
+def is_leap(y):
+    return (y%400==0) or (y%100!=0 and y%4==0)
+
+
