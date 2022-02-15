@@ -131,3 +131,61 @@ def is_leap(y):
     return (y%400==0) or (y%100!=0 and y%4==0)
 
 
+# The included code stub will read an integer, , from STDIN.
+# Without using any string methods, try to print the following:
+# Note that "" represents the consecutive values in between.
+# Example
+
+# Print the string 12345
+
+#sln 1
+from __future__ import print_function
+N = int(raw_input())
+for i in range(1, N+1):
+    print(i, end="")
+
+
+#soln 
+[print(i+1, end = '') for i in range(n)]
+
+#soln 
+[print(*range(1, int(input())+1), sep='')]
+
+
+# Let's learn about list comprehensions! You are given three integers  and  representing the dimensions 
+# of a cuboid along with an integer . Print a list of all possible coordinates given by  on a 3D grid where 
+# the sum of  is not equal to . Here, . Please use list comprehensions rather than multiple loops, as a 
+# learning exercise.
+
+
+
+#soln [not recomended because fo repetition ]
+x, y, z, n = int(input()), int(input()), int(input()), int(input())
+print ([[a,b,c] for a in range(0,x+1) for b in range(0,y+1) for c in range(0,z+1) if a + b + c != n ])
+
+# soln 2 [more precise]
+x, y, z, n = int(input()) for _ in range((4)) # underscore is used because we wont be using the var
+print ([[a,b,c] for a in range(0,x+1) for b in range(0,y+1) for c in range(0,z+1) if a + b + c != n ])
+
+# oln 
+if __name__ == '__main__':
+    x = int(raw_input())
+    y = int(raw_input())
+    z = int(raw_input())
+    n = int(raw_input())
+    
+    print([[a,b,c]for a in range(0,x+1) for b in range(0,y+1) for c in range(0,z+1)
+    if a + b + c != n])
+
+
+
+# Given the participants' score sheet for your University Sports Day, you are required to find the runner-up score. You are given  scores. Store them in a list and find the score of the runner-up.
+# Input Format
+# The first line contains . The second line contains an array   of  integers each separated by a space.
+
+
+# soln 
+
+
+
+
