@@ -1,4 +1,4 @@
-price = int(input("Enter price"))
-quantity = int(input("Quantit?"))
-cost = price * quantity
-print(f"Total cost ksh. {cost} only ")
+def greeting_message(school,name):
+    print(f"from {school} we welcome home {name}") 
+
+greeting_message("set","Timz")

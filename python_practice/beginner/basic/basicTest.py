@@ -335,3 +335,19 @@ if __name__ == '__main__':
 
 
 
+#Given an integer, , and  space-separated integers as
+#  input, create a tuple, , of those  integers. Then compute and print the result of .
+# Note: hash() is one of the functions in the __builtins__ module, so it need not be imported
+
+if __name__ == '__main__':
+    n = int(raw_input())
+    input_line = raw_input()
+    input_list = input_line.split()
+    for i in xrange(n):
+        input_list[i] = int(input_list[i])
+    t = tuple(input_list)
+    print(hash(t))
+
+#You are given a string and your task is to swap cases. In other words, convert all lowercase letters to uppercase letters and vice versa.
+
+
