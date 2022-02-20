@@ -53,3 +53,9 @@ having total_score > 0
 /* finally order as required */
 order by total_score desc, h.hacker_id
 ;
+
+
+-- query with name ending with voewls 
+SELECT DISTINCT CITY FROM STATION WHERE RIGHT(CITY,1) IN ('a','e','i','o','u');  --my sql
+SELECT DISTINCT(CITY) FROM STATION WHERE CITY LIKE '%[AEIOU]'; ---> ms mysql server 
+
