@@ -59,3 +59,8 @@ order by total_score desc, h.hacker_id
 SELECT DISTINCT CITY FROM STATION WHERE RIGHT(CITY,1) IN ('a','e','i','o','u');  --my sql
 SELECT DISTINCT(CITY) FROM STATION WHERE CITY LIKE '%[AEIOU]'; ---> ms mysql server 
 
+-- starts and ends in vowels
+SELECT DISTINCT(CITY) FROM STATION WHERE LEFT(CITY,1) IN ('a','e','i','o','u') and RIGHT (CITY,1) IN ('a','e','i','o','u');
+
+-- does not start with vowels
+SELECT DISTINCT(CITY) FROM STATION WHERE CITY REGEXP '^[^a,e,i,o,u]';
