@@ -1,9 +1,8 @@
-my_tuples = (1,2,3,4,6,7,8,9,10,12,14,16,18) 
+# compare lists and tuple in time and space complexity
+import timeit
 
-print(my_tuples[::2]) # print in intervals of 2
-print(my_tuples[1:2]) # print elements between 1 and 2
-print(my_tuples[::-2]) # prints at inteval from last element
-
+my_list = [0,1,2,3,4,5,6,7,8,9]
+my_tuple = (0,1,2,3,4,5,6,7,8,9)
 
 
 

@@ -90,3 +90,30 @@ back_to_tuple = tuple(tuple_to_list) # back to tuple from list
 my_tuples[::2] # print in intervals of 2
 my_tuples[1:2] # print elements between 1 and 2
 my_tuples[::-2] # prints at inteval from last element
+
+# unpack elements from a tuple
+unpack_tuples = ("Timz", 20, "Developer") 
+
+user_name, age, role = unpack_tuples
+print(user_name)
+print(age)
+print(role)
+
+# compare lists and tuple in time and space complexity (tuples safes on space and time than list)
+import sys
+import timeit
+
+my_list = [0,1,2,3,4,5,6,7,8,9]
+my_tuple = (0,1,2,3,4,5,6,7,8,9)
+
+print(sys.getsizeof(my_list)) # returns 152
+print(sys.getsizeof(my_tuple)) # returns 125
+print(timeit.timeit(stmt="[1,2,3,4,5,6,7,8,9]",number=10000000)) #0.6379658329997255
+print(timeit.timeit(stmt="(1,2,3,4,5,6,7,8,9)",number=10000000)) #0.11949894600002153
+
+
+
+
+
+
+# DICTIONARIES
