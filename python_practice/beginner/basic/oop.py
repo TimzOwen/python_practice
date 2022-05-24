@@ -59,7 +59,7 @@ print(mydata)
 # TUPLES
 # ordered immutable elements in branckets.(single items must be comma separated) 
 
-my_tuples = ("one",2, 4, "seven") # tuple creation
+my_tuples = ("one",2, 4, "seven",2,3,4,6,7,8,9)  # tuple creation
 
 my_tuple = ("Timz",) # returns a tuple
 my_tuples = ("Timz") #returns a string object
@@ -67,4 +67,26 @@ my_tuples = ("Timz") #returns a string object
 list_to_tuple = (["one","Two","Three"]) # returns a type list
 list_2_tuple = tuple(list_to_tuple) # returns a type of tuple
 
+list_to_tuple[0] # accessing tuples at specific index
 
+for items in my_tuples:  # Itereate throu elements in tuples
+    print(items)
+
+if "one" in my_tuples:  # Check elements availability on a tuple
+    print("yes")
+else:
+    print("No")
+
+len(my_tuples) # returns total number of items in the a tuple
+
+my_tuples.count(2) # returns the total number of occurance of element in tuple
+
+my_tuples.index(2) # returns first occurrance of element in multiple occurance
+
+tuple_to_list = list(my_tuples) # convert tulpe to list
+
+back_to_tuple = tuple(tuple_to_list) # back to tuple from list 
+
+my_tuples[::2] # print in intervals of 2
+my_tuples[1:2] # print elements between 1 and 2
+my_tuples[::-2] # prints at inteval from last element
