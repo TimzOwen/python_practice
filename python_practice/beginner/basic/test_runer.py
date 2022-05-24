@@ -1,4 +1,8 @@
-mydata = [2,4,6,8,10]
 
-print([i*i for i in mydata])
-print(mydata)
+list_to_tuple = (["one","Two","Three"])
+list_2_tuple = tuple(list_to_tuple)
+
+
+print(type(list_to_tuple))
+print(type(list_2_tuple))
+

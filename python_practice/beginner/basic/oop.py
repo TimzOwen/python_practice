@@ -52,3 +52,19 @@ print(mydata[3:]) # string clicing
 print([i*i for i in mydata]) # string comprehension 
 print(mydata)
 
+
+
+
+
+# TUPLES
+# ordered immutable elements in branckets.(single items must be comma separated) 
+
+my_tuples = ("one",2, 4, "seven") # tuple creation
+
+my_tuple = ("Timz",) # returns a tuple
+my_tuples = ("Timz") #returns a string object
+ 
+list_to_tuple = (["one","Two","Three"]) # returns a type list
+list_2_tuple = tuple(list_to_tuple) # returns a type of tuple
+
+
