@@ -88,8 +88,12 @@ tuple_to_list = list(my_tuples) # convert tulpe to list
 back_to_tuple = tuple(tuple_to_list) # back to tuple from list 
 
 my_tuples[::2] # print in intervals of 2
+reversed(my_tuple) # reverse a tuple in python
 my_tuples[1:2] # print elements between 1 and 2
 my_tuples[::-2] # prints at inteval from last element
+
+for x in reversed_tuple: # retuens a list of reversed tuple
+    print(x)
 
 # unpack elements from a tuple
 unpack_tuples = ("Timz", 20, "Developer") 
@@ -117,3 +121,46 @@ print(timeit.timeit(stmt="(1,2,3,4,5,6,7,8,9)",number=10000000)) #0.119498946000
 
 
 # DICTIONARIES
+# unordered, mutable,key-value items
+
+my_dictionary = {"name":"Timz","age":22,"Role":"Developer"} # create a dictionaty
+my_dictionary2 = dict(user="Owen",staff="Engineer",laptop="HP") # second dictionary
+ 
+my_dict_fun = dict(city="Nairobi", population=400, senetor="Sonko") # creating using dictinary function
+
+my_dictionary["name"] # access elements in a dic
+
+my_dictionary["car"] = "BMW" # adding new elements
+
+del my_dictionary["age"] # delete items in the dict
+
+my_dictionary.pop("age") # remove specific index 
+
+my_dictionary.popitem() # removes last item in the dictonary
+
+
+if "name" in my_dictionary: # check element occurance in dictionary
+    print("present")
+else:
+    print("No such key")
+
+
+for key,value in my_dictionary.items(): # loop thru key and value pairs dict
+    print(key,value)
+
+
+try:
+    print(my_dictionary["car"]) # searching an element using try-except
+except:
+    print("No such elemeny")
+
+
+my_dictionary.update(my_dictionary2) # merging two dictionaries
+
+
+
+
+
+
+#SETS 
+
