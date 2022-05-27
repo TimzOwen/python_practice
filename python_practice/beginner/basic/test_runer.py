@@ -1,11 +1,7 @@
-from unicodedata import name
-
-
-my_dictionary = {"name":"Timz","age":22,"Role":"Developer"}
-my_dictionary2 = dict(user="Owen",staff="Engineer",laptop="HP")
-
-my_dictionary.update(my_dictionary2)
-print(my_dictionary)
-
-for x in my_dictionary2.items():
-    print(x)
+#sets 
+print("Enter int N")
+n = int(input().strip()) # remove spaces
+if (n%2) == 1:
+    print("Not weird")
+else:
+    print("weird")
