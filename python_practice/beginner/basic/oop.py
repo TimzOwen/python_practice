@@ -10,6 +10,8 @@ greeting_message("set","Timz")
 mylist = ["one","two","three","Four"]
 mysecond_data = ["Timz"] * 5
 
+a,b = 4, 8 # simultaneous assignments
+
 # iterate lists 
 
 mydata = ["one","Two","three","Four","Five","six"]
@@ -161,7 +163,6 @@ my_dictionary.update(my_dictionary2) # merging two dictionaries
 
 
         
-
 # SETS 
 # unordered, nutable ,non-repetitive items
 
