@@ -170,3 +170,5 @@ set_items = {2,4,6,8,10} # create new set
 
 for x in set_items: # Iterate thru a set
     print(x)
+
+
