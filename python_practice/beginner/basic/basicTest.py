@@ -372,3 +372,57 @@ if __name__ == '__main__':
     print(result)
 
 
+'''Task
+Given an integer, , perform the following conditional actions:
+
+If  is odd, print Weird
+If  is even and in the inclusive range of  to , print Not Weird
+If  is even and in the inclusive range of  to , print Weird
+If  is even and greater than , print Not Weird '''
+
+if __name__ == '__main__':
+    n = int(input().strip())
+    
+    if (n%2) == 1:
+        print("Weird")
+    elif (n%2) == 0 and n in range(2,5):
+        print("Not Weird")
+    elif (n%2) == 0 and n in range(6,20):
+        print("Weird")
+    elif (n%2) == 0 and n > 20:
+        print("Not Weird") 
+
+
+
+# split and join words 
+a = "This is not a genuine code"
+a  = a.split()
+print(a)
+
+a = " ".join(a)
+print(a)
+
+
+# smaple 2 on joining an spliting a string (we assume we getting inout from user)
+
+def split_and_join(line):
+    # write your code here
+    line = line.split()
+    line = "-".join(line)
+    return line
+    
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
+
+
+# String formating, add first and last name to the given string 
+def print_full_name(first, last):
+    # Write your code here
+    print(f"Hello {first} {last}! You just delved into python.")
+
+if __name__ == '__main__':
+    first_name = input()
+    last_name = input()
+    print_full_name(first_name, last_name)
