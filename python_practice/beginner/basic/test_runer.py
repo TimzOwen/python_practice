@@ -1,0 +1,2 @@
+string = "abcdcdab"
+print(string)
