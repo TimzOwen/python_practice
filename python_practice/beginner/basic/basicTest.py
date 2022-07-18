@@ -372,8 +372,8 @@ if __name__ == '__main__':
     print(result)
 
 
-'''Task
-Given an integer, , perform the following conditional actions:
+'''
+Task Given an integer, , perform the following conditional actions:
 
 If  is odd, print Weird
 If  is even and in the inclusive range of  to , print Not Weird
@@ -428,3 +428,4 @@ if __name__ == '__main__':
     print_full_name(first_name, last_name)
     
     
+# 
