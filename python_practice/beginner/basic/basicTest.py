@@ -101,7 +101,7 @@ year = int(raw_input())
 
 
 # sln 2
-year=int(input("enter year to checjk"))
+year=int(input("enter year to check"))
 
 def check_year(year):
     leap = False
@@ -122,8 +122,8 @@ def is_leap(year):
         leap = True
         if (year % 100 == 0):
             leap = False
-	if (year % 400 == 0):
-                leap = True
+	if(year % 400 == 0):
+            leap = True
     return leap
 
 #soln 5 
@@ -426,6 +426,15 @@ if __name__ == '__main__':
     first_name = input()
     last_name = input()
     print_full_name(first_name, last_name)
-    
-    
-# 
+       
+# create a list and print only number less than 5 or equal to  in a list
+# Example in a list of [2,3,4,5,11,1,16,7,8,9] -> [2,3,4,1]
+nums = [1,2,4,3,2,5,7,9,44]
+x = []
+for i in nums:
+    if i <= 5:
+        x.append(i)
+        x.sort()
+print(x)  # returns a list of number less than 5 in a list given
+print([j for j in nums if j<5]) # using one line solution to print the list
+
