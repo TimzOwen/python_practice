@@ -1,6 +1,3 @@
-# print only commin elements between 2 lists without duplicates
-
-a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-
-print(list(set(a) & set(b)))
+a = [2,1,4,7,9,8,12,60,6,2,7,90]
+new_a = [x for x in a if x % 2 == 0 ]
+print(new_a)

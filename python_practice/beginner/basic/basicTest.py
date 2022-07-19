@@ -55,6 +55,7 @@ print(a*b)
 # No rounding or formatting is necessary.
 
 from __future__ import division
+from turtle import st
 
 if __name__ == '__main__':
     a = int(raw_input())
@@ -507,3 +508,15 @@ b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 print(list(set(a) & set(b)))
 
 
+# write  a program to check if a string is palidrome(Checks if read same as reverse oder)
+def checkPalidrone():
+    user_string = input("Enter string to check: ")
+    if str(user_string) == str((user_string)[::-1]):
+        print("Pallidrone")
+    else:
+        print("Not Pallidrone")
+
+# print only even number in a list using list comprehension 
+list_a = [2,3,5,7,9,12,38,90]
+list_even = [x for x in list_a if x % 2 == 0]
+print(list_even)
