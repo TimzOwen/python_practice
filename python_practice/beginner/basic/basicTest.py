@@ -457,3 +457,53 @@ year_100()
 # If the number is a multiple of 4, print out a different message.
 # Ask the user for two numbers: one number to check (call it num) and one number to divide by (check). If check divides evenly into num, 
 # tell that to the user. If not, print a different appropriate message.
+def check_divisibility():
+    num = int(input("Enter num to check divisibility: "))
+    check = int(input("Enter check number to divide: "))
+    
+    if(num % check == 0 and num % 4 == 0):
+        print("This is a multiple of 4")
+        ("This is an Even Number")
+    elif (num % 2 == 0):
+        print("Even Number")
+    else:
+        print("This is an odd number")
+        
+check_divisibility()
+
+
+
+# print divisibility of a number in a given range. [use list,conditions and user input]
+def get_divisor():
+    num = int(input("Enter number to check divisibility: "))
+    divisor_list = []
+    list_range = list(range(1, num + 1))
+    for number in list_range:
+        if num % number == 0:
+            divisor_list.append(number)
+    print(divisor_list)            
+
+get_divisor()            
+
+
+def check_divisibility():
+    user_number = int(input("Enter number to check divisibility"))
+    list_range = list(range(1, user_number + 1))
+    divisor_list = []
+    for number in list_range:
+        if(user_number % number == 0):
+            divisor_list.append(number)
+    print(divisor_list)
+    
+check_divisibility()    
+
+
+
+# print only commin elements between 2 lists without duplicates
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+print(list(set(a) & set(b)))
+
+
