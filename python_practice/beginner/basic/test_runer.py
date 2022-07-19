@@ -1,12 +1,13 @@
-# create a list and print only number less than 5 in a list
-# Example in a list of [2,3,4,5,11,1,16,7,8,9] -> [2,3,4,1]
-nums = [1,2,4,3,2,53,5,4,7,9,44]
-x = []
-for i in nums:
-    if i <= 5:
-        x.append(i)
-        x.sort()
-print(x)
-
-# using lambda gives a one line solution like
-print([j for j in nums if j<5])
+def check_divisibility():
+    num = int(input("Enter num to check divisibility: "))
+    check = int(input("Enter check number to divide: "))
+    
+    if(num % check == 0 and num % 4 == 0):
+        print("This is a multiple of 4")
+        ("This is an Even Number")
+    elif (num % 2 == 0):
+        print("Even Number")
+    else:
+        print("This is an odd number")
+        
+check_divisibility()

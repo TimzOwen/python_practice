@@ -438,3 +438,22 @@ for i in nums:
 print(x)  # returns a list of number less than 5 in a list given
 print([j for j in nums if j<5]) # using one line solution to print the list
 
+
+
+# User Input and Numerics
+# get a user name, age and print to the the year they turn 100 years;
+
+def year_100():
+    name = input("Enter your name: ")
+    age = int(input("What's your age: "))
+    turn_100 = ((2022) + (100 - age))
+    print(f" Hello {name} You will turn 100 years in the year {turn_100}")
+    
+year_100()
+
+
+# Ask the user for a number. Depending on whether the number is even or odd, print out an appropriate message to the user.
+# Hint: how does an even / odd number react differently when divided by 2?
+# If the number is a multiple of 4, print out a different message.
+# Ask the user for two numbers: one number to check (call it num) and one number to divide by (check). If check divides evenly into num, 
+# tell that to the user. If not, print a different appropriate message.
