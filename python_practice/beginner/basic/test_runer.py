@@ -1,25 +1,13 @@
-# Random guess game:
+# check if a number is prime or not
 
-
-
-def guess_game():
-    guess = input("Enter a random number between 1 and 9")
-    quit_game = "quit"
-    guess_count = 0
-    guess_number = 7
-    while guess != guess_number and guess != "exit":   
-                     
-        if(guess == "exit"):
-            break
-        guess = int(guess)
-        guess_count += 1
+def check_prime():
+    user_number = int(input("\n Enter number to check divisibility: "))
+    if user_number > 1:
+        for i in range(2,user_number//2):
+            if(user_number%i  == 0):
+                print("This is NOT Prime number")
+                break
+            else:
+                print("This is a prime number")                
         
-        if (guess < guess_number):
-            print("Your guess too low..")
-        elif(guess >guess_number):
-            print("Guess too high")
-        else:
-            print(f"you guessed it right , its {guess_number} with {guess_count} trials only" )
-                
-guess_game()
-    
+check_prime()

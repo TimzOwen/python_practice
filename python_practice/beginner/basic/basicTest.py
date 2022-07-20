@@ -507,6 +507,13 @@ b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
 print(list(set(a) & set(b)))
 
+# list comprehension
+a = [1,2,3,4,5,6,8,9,4,3,5]
+b = [1,6,9,33,22,6,788,3]
+print([i for i in a if i in b])
+
+#
+
 
 # write  a program to check if a string is palidrome(Checks if read same as reverse oder)
 def checkPalidrone():
@@ -600,3 +607,19 @@ def guess_game():
                 
 guess_game()
     
+    
+# check if a number is prime or not
+
+def check_prime():
+    user_number = int(input("\n Enter number to check divisibility: "))
+    if user_number > 1:
+        for i in range(2,user_number//2):
+            if(user_number%i  == 0):
+                print("This is NOT Prime number")
+                break
+            else:
+                print("This is a prime number")                
+        
+check_prime()
+
+
