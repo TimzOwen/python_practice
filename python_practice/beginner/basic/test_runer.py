@@ -1,13 +1,17 @@
-# check if a number is prime or not
+# write a program that takes in first and last elements in a list
 
-def check_prime():
-    user_number = int(input("\n Enter number to check divisibility: "))
-    if user_number > 1:
-        for i in range(2,user_number//2):
-            if(user_number%i  == 0):
-                print("This is NOT Prime number")
-                break
-            else:
-                print("This is a prime number")                
-        
-check_prime()
+def list_comprehension():
+    
+    a = [2,4,6,8,10]
+    b = []
+    b.append(a[0])
+    b.append(a[-1])
+
+    print(b)
+
+list_comprehension()
+
+def list_comp(list_a):
+    return [list_a[0], list_a[len(list_a) - 1]]
+    
+print(list_comp([2,3,4,4,5,6]))
