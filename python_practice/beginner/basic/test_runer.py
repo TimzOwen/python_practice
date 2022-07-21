@@ -1,18 +1,13 @@
-# write a funtion that will retrun a list not containing duplicates.
+# write a function that returns a sentence with its characters in reverse oder
 
-list_a = ["timz","owen","timo","TimTim","Timz","owen","timz","Timo"]
-list_b = ["owen","timz","timtim","owen","andela"]
-new_list = []
+from curses import init_pair
+from ntpath import join
 
-def remove_duplicates(): # using for loop to remove duplicates
-    for i in list_a:
-        if i not in new_list:
-            new_list.append(i)
-    print(new_list)    
-remove_duplicates()
 
-def remove_dup_set():   # using sets to remove duplicates
-    return list(set(list_a))
+def reverse_sentence():
+    words = input("Enter words to reverse: ")
+    split_word = words.split()
+    join_word = " ".join(split_word[::-1])
+    return join_word
 
-print(remove_dup_set())
-    
+print(reverse_sentence())
