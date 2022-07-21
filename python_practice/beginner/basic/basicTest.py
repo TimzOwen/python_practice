@@ -702,13 +702,44 @@ import string
 import random
 
 def password_generator():
-    set_combine1 = string.ascii_lowercase
-    set_combine2 = string.ascii_uppercase
+    set_combine1 = string.ascii_letters
     set_combine3 = string.digits
     set_combine4 = string.punctuation
     
-    all_combination = set_combine1 + set_combine2 + set_combine3 + set_combine4
+    all_combination = set_combine1  + set_combine3 + set_combine4
     password = "".join(random.choices(all_combination,k=8))
     
     return password
 print(password_generator())
+
+# use one function to return the password generator using choice
+def psd_gen(size=9, combination = string.ascii_letters + string.digits + string.punctuation):
+    return ("".join(random.choice(combination) for _ in range(size)))
+print(psd_gen(int(input("How many char is your passwd? : "))))
+
+
+
+# Use the requests library to load the HTML of the page into Python
+# Set up BeautifulSoup to process the HTML
+# Find out which HTML tags contain all the titles
+# Use BeautifulSoup to extract all the titles from the HTML
+# Format them nicely
+
+import requests
+from bs4 import BeautifulSoup
+
+base_url = "http://www.nytimes.com"
+r = requests.get(base_url)
+soup = BeautifulSoup(r.text)
+
+for story_heading in soup.find_all(class_="story-heading"):
+    if story_heading.a:
+        print(story_heading.a.text.replace("\n", "").strip())
+    else:
+        print(story_heading.contents[0].strip())
+        
+
+        
+
+
+
