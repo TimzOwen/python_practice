@@ -1,3 +1,10 @@
+from curses import init_pair
+from ntpath import join
+from __future__ import division
+from turtle import st
+import sys
+from __future__ import print_function
+
 # Given an integer, , perform the following conditional actions:
 
 # If  is odd, print Weird
@@ -54,8 +61,6 @@ print(a*b)
 # Add logic to print two lines. The first line should contain the result of integer division,  // . The second line should contain the result of float division,  / .
 # No rounding or formatting is necessary.
 
-from __future__ import division
-from turtle import st
 
 if __name__ == '__main__':
     a = int(raw_input())
@@ -140,7 +145,6 @@ def is_leap(y):
 # Print the string 12345
 
 #sln 1
-from __future__ import print_function
 N = int(raw_input())
 for i in range(1, N+1):
     print(i, end="")
@@ -552,8 +556,6 @@ rock_scissor_paper()
 
 # Rock paper and scissor Game:
 
-import sys
-
 user_name1 = input("Hello, What your name? ")
 user_name2 = input("And you? ")
 user_1 = input(f"Hey {user_name1}, Do you want to choose rock, scissor or paper?...")
@@ -661,5 +663,29 @@ def remove_dup_set():   # using sets to remove duplicates
 print(remove_dup_set())
     
     
-#     
+    
+# write a function that returns a sentence with its characters in reverse oder
+# used 5 diffrrenr options to solve this question 
+
+def reverse_sentence(words): # using string and split 
+    split_word = words.split()
+    join_word = " ".join(split_word[::-1])
+    return join_word
+print(reverse_sentence("This is reversed"))
+
+def word_join(x):   #using one lineer killer 
+    return " ".join(x.split()[::-1])
+
+print(word_join("This is owen testing"))
+
+def word_reversedby(y): # using reversed keyword
+    w = y.split()
+    return " ".join(reversed(w))
+print(word_reversedby("using reversed key word"))
+
+def word_split_join(w):
+    w_split = w.split()
+    w_split.reverse()
+    return " ".join(w_split)
+print(word_split_join("This is reversed too"))
 
