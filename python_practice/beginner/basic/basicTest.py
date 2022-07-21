@@ -1,9 +1,13 @@
+from __future__ import print_function
+from __future__ import division
 from curses import init_pair
 from ntpath import join
-from __future__ import division
 from turtle import st
+import string
+import random
 import sys
-from __future__ import print_function
+
+
 
 # Given an integer, , perform the following conditional actions:
 
@@ -689,3 +693,22 @@ def word_split_join(w):
     return " ".join(w_split)
 print(word_split_join("This is reversed too"))
 
+
+
+# create a password generator using randome char 
+# you can use Strinf, choces and random to generate the values
+# you can use string constance and operations to deal with this.
+import string
+import random
+
+def password_generator():
+    set_combine1 = string.ascii_lowercase
+    set_combine2 = string.ascii_uppercase
+    set_combine3 = string.digits
+    set_combine4 = string.punctuation
+    
+    all_combination = set_combine1 + set_combine2 + set_combine3 + set_combine4
+    password = "".join(random.choices(all_combination,k=8))
+    
+    return password
+print(password_generator())
