@@ -3,6 +3,8 @@ from __future__ import division
 from curses import init_pair
 from ntpath import join
 from turtle import st
+import requests
+from bs4 import BeautifulSoup
 import string
 import random
 import sys
@@ -725,8 +727,7 @@ print(psd_gen(int(input("How many char is your passwd? : "))))
 # Use BeautifulSoup to extract all the titles from the HTML
 # Format them nicely
 
-import requests
-from bs4 import BeautifulSoup
+
 
 base_url = "http://www.nytimes.com"
 r = requests.get(base_url)
@@ -740,6 +741,42 @@ for story_heading in soup.find_all(class_="story-heading"):
         
 
         
+# Fibonacci number generation:
+# using if condition to loop thru fibonacci
+def fibonacci():
+    num = int(input("How many numbers that generates?:"))
+    i = 1
+    if num == 0:
+        fib = []
+    elif num == 1:
+        fib = [1]
+    elif num == 2:
+        fib = [1,1]
+    elif num > 2:
+        fib = [1,1]
+        while i < (num - 1):
+            fib.append(fib[i] + fib[i-1])
+            i += 1
+    return fib
+print(fibonacci())
+
+# Create a program that will play the “cows and bulls” game with the user.
+# The game works like this:Randomly generate a 4-digit number. Ask the user to 
+# guess a 4-digit number.For every digit that the user guessed correctly in the 
+# correct place, theyhave a “cow”. For every digit the user guessed correctly in 
+# the wrong place is a “bull.” Every time the user makes a guess, tell them how many 
+# “cows” and“bulls” they have. Once the user guesses the correct number, the game is over.
+# Keep track of the number of guesses the user makes throughout teh game and tell the user 
+# at the end.
+
+
+
+
+
+
+
+
+
 
 
 
