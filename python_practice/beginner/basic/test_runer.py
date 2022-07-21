@@ -1,17 +1,13 @@
-# write a program that takes in first and last elements in a list
+# write a function that returns a sentence with its characters in reverse oder
 
-def list_comprehension():
-    
-    a = [2,4,6,8,10]
-    b = []
-    b.append(a[0])
-    b.append(a[-1])
+from curses import init_pair
+from ntpath import join
 
-    print(b)
 
-list_comprehension()
+def reverse_sentence():
+    words = input("Enter words to reverse: ")
+    split_word = words.split()
+    join_word = " ".join(split_word[::-1])
+    return join_word
 
-def list_comp(list_a):
-    return [list_a[0], list_a[len(list_a) - 1]]
-    
-print(list_comp([2,3,4,4,5,6]))
+print(reverse_sentence())
