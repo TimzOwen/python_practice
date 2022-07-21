@@ -1,17 +1,18 @@
-# write a program that takes in first and last elements in a list
+# write a funtion that will retrun a list not containing duplicates.
 
-def list_comprehension():
+list_a = ["timz","owen","timo","TimTim","Timz","owen","timz","Timo"]
+list_b = ["owen","timz","timtim","owen","andela"]
+new_list = []
+
+def remove_duplicates(): # using for loop to remove duplicates
+    for i in list_a:
+        if i not in new_list:
+            new_list.append(i)
+    print(new_list)    
+remove_duplicates()
+
+def remove_dup_set():   # using sets to remove duplicates
+    return list(set(list_a))
+
+print(remove_dup_set())
     
-    a = [2,4,6,8,10]
-    b = []
-    b.append(a[0])
-    b.append(a[-1])
-
-    print(b)
-
-list_comprehension()
-
-def list_comp(list_a):
-    return [list_a[0], list_a[len(list_a) - 1]]
-    
-print(list_comp([2,3,4,4,5,6]))
