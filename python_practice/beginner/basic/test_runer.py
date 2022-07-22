@@ -1,23 +1,13 @@
-def guessing_game():
-    high_range = int(input("What is the number range?\n1 to ..."))
-    low_range = 1
-    midpoint = int(high_range / 2)
-    guess_count = 0
-
-    while True:
-        print(f"Is your number {midpoint}?\n1. Yes\n2. Too low\n3. Too high")
-        guess = int(input())
-        if guess == 1: # If the guess is correct
-            print(f"I got it in {guess_count + 1} tries!")
+def solutionA():
+    user_array = [1,3,5,7,2]
+    for x in range (min(user_array), max(user_array)):
+        if x not in user_array:
             break
-        elif guess == 2: # If the guess is too low
-            guess_count += 1
-            low_range = midpoint
-            midpoint = low_range + int(((high_range - low_range) / 2))
-        else: # if guess is too high
-            guess_count += 1
-            high_range = midpoint
-            midpoint = low_range + int(((high_range - low_range) / 2))
+        return x
+# print(solutionA())
 
-    print("Thanks for playing!")
-(guessing_game())
+from itertools import count, filterfalse # ifilterfalse on py2
+
+def solution(A): 
+    print(next(filterfalse(set(A).__contains__, count(1))))
+solution(A=[3,-2,5,7])
