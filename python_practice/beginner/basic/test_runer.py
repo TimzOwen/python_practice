@@ -1,13 +1,9 @@
-def solutionA():
-    user_array = [1,3,5,7,2]
-    for x in range (min(user_array), max(user_array)):
-        if x not in user_array:
-            break
-        return x
-# print(solutionA())
-
-from itertools import count, filterfalse # ifilterfalse on py2
-
-def solution(A): 
-    print(next(filterfalse(set(A).__contains__, count(1))))
-solution(A=[3,-2,5,7])
+# function to choose between 3 greatest
+def greatest_number(a,b,c):
+    if a > b and a > c:
+        print("a is greatest")
+    elif b>a and b > c:
+        print("b is greatest")
+    else:
+        print("c is greatest")
+greatest_number(5,10,15)
