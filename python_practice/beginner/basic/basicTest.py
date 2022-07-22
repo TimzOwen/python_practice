@@ -917,3 +917,16 @@ print(user_string[:5] + "z" + user_string[6:])
 # question 2, using the given string and position replce a given position
 def mutate_string(string, position, character):
     return (string[:position] + character + string[position+1:])
+
+
+# write a funciton to take in a given string and a substring
+# calciulate the number of occurances in the string
+# ex ABCDCDC ->CDC = 2 occurances
+
+def count_substring(string, sub_string):
+    count = 0
+    for i in range(len(string)):
+        if string[i:].startswith(sub_string):
+            count += 1
+    return count
+print(count_substring('abcdcdc','cdc'))
