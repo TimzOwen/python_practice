@@ -899,3 +899,21 @@ def greatest_number(a,b,c):
     else:
         print("c is greatest")
 greatest_number(5,10,15)
+
+
+# String contatenationa and mutation:
+# given a immutable string chage the 5th occurance
+# hint -> first convert it to a string
+user_string = "abcdefgh"
+user_list = list(user_string)
+user_list[4] = "z"
+user_list = ''.join(user_list)
+print(user_list)
+
+# soln 2 --> using slicing 
+user_string = "abcdefgh"
+print(user_string[:5] + "z" + user_string[6:])
+
+# question 2, using the given string and position replce a given position
+def mutate_string(string, position, character):
+    return (string[:position] + character + string[position+1:])
