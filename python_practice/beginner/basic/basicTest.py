@@ -930,3 +930,17 @@ def count_substring(string, sub_string):
             count += 1
     return count
 print(count_substring('abcdcdc','cdc'))
+
+
+
+# swapping number:
+A = 5 
+B = 8
+
+C = A
+A = B
+B = C
+
+print(f"A: {A} and B: {B}")
+
+
