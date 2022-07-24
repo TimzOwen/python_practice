@@ -1,11 +1,17 @@
-# write a funciton to take in a given string and a substring
-# calciulate the number of occurances in the string
-# ex ABCDCDC ->CDC = 2 occurances
+from operator import le
 
-def count_substring(string, sub_string):
-    count = 0
-    for i in range(len(string)):
-        if string[i:].startswith(sub_string):
-            count += 1
-    return count
-print(count_substring('abcdcdc','cdc'))
+
+def solution(A):
+    max_num = A[0]
+    n = len(A)
+    even_list = []
+    for x in range(1,n):
+        if A[x] %4 == 0:
+            even_list.append(A[x])
+    print(even_list)
+    return max(even_list)
+        
+    
+print(solution(A=[2,-8,50,101,4,7,-3,89,84, 48,44,11]))
+
+
