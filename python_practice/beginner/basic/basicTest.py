@@ -944,5 +944,41 @@ B = C
 print(f"A: {A} and B: {B}")
 
 
+# check for the largets  number in an array and divisibility of 4:
+# return the list with the larget number.
+
+#soln 1
+def solution(A):
+    n = len(A)
+    even_list = []
+    for x in range(1,n):
+        if A[x] %4 == 0:
+            even_list.append(A[x])
+    print(even_list)
+    return max(even_list)
+            
+print(solution(A=[2,-8,50,101,4,7,-3,89,84, 48,44,11]))
+#soln 2 
+def solution(A):
+    divisible_4 = [x for x in A if x % 4 == 0]
+    largest = max(divisible_4)
+    return largest
+print(solution(A=[2,5,-5,44,88,124,33]))   
+#soln 3
+def solution(A):
+    largest = -1 # no solution 
+    for x in A:
+        if x > largest and x %4==0:
+            largest = x
+            return x
+print(solution(A=[-1,-8,-44,-124,88, 85,12]))
+    
+    
+
+
+
+
+
+
 
 
