@@ -10,8 +10,7 @@ def solution(A):
             even_list.append(A[x])
     print(even_list)
     return max(even_list)
-        
-    
+            
 print(solution(A=[2,-8,50,101,4,7,-3,89,84, 48,44,11]))
 
 
