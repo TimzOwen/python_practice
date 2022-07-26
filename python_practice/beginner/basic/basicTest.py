@@ -975,10 +975,38 @@ print(solution(A=[-1,-8,-44,-124,88, 85,12]))
     
     
 
+# write a function shownumber which prints if even or odd
+# 0 EVEN
+# 1 ODD
+# 2 EVEN 
+# depending on user input on the range given
 
+def show_numbers(limit):
+    for x in range(0,(limit + 1)):
+        if x % 2 == 0:
+            print(f"{x} EVEN")
+        else:
+            print(f"{x} ODD")
+show_numbers(6)
+    
+# Write a function that returns the sum of multiples of 3 and 5 between 0 and 
+# limit (parameter). For example, if limit is 20, it should return the sum of 
+# 3, 5, 6, 9, 10, 12, 15, 18, 20.
 
+def sum_3_5(limit):
+    sum = 0
+    for x in range(0,(limit + 1)):
+        if x % 3 == 0 or x % 5 ==0:
+            sum += x 
+    return sum
+print(sum_3_5(20))
 
-
-
-
-
+# return stars in this order depending on user input 
+#   *
+#   **
+#   ***
+#   ****   make sure to include the last digit:
+def print_stars(number):
+    for  i in range(number + 1):
+        print(i * "*")
+print_stars(number=int(input("How many stars do you want?:...")))
