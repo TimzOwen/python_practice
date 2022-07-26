@@ -1001,5 +1001,12 @@ def sum_3_5(limit):
     return sum
 print(sum_3_5(20))
 
-
-
+# return stars in this order depending on user input 
+#   *
+#   **
+#   ***
+#   ****   make sure to include the last digit:
+def print_stars(number):
+    for  i in range(number + 1):
+        print(i * "*")
+print_stars(number=int(input("How many stars do you want?:...")))
